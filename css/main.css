@@ -1,0 +1,219 @@
+/*****************************General Styling*****************************/
+div.clear {
+	clear: both;
+}
+
+html {
+  height: 100%;
+  /*box-sizing: border-box;*/
+}
+/**,
+*:before,
+*:after {
+  box-sizing: inherit;
+}*/
+
+body {
+	padding-top: 70px;/* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+	position: relative;
+  margin: 0;
+  padding-bottom: 30rem;/* This pushes the footer down under the content so it doesn't overlap */  
+  min-height: 100%;
+}
+
+
+/* Wrapper for page content to push down footer */
+#wrap {
+	min-height:100%;
+	position:relative;
+	margin: 0 auto;
+  padding-top: 64px;
+}
+
+
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+		background: url(../img/mapblue.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+	color: #ecf0f1;
+}
+
+/*****************************Navbar*****************************/
+/*.navbar {
+	border-bottom: 2px solid #ecf0f1;
+}*/
+
+
+/*This changes the default color of the mobile drop down button in the menu to white */
+.icon-bar {
+	background-color: #ecf0f1;
+}
+
+.navbar-brand:hover {
+	opacity: 0.5;
+}
+
+
+.navbar .navbar-nav > li > a:hover, 
+.navbar .navbar-nav > li > a:focus {
+  background-color: white;
+  color: #3068b2;
+}
+
+.navbar .navbar-nav > .active,
+.navbar .navbar-nav > .active > a
+{
+  background-color: #ecf0f1; /* #ecf0f1 smoke */
+  color: #3068b2; /* #3068b2 blue */
+  text-decoration: underline;
+  font-weight: bolder;
+}
+
+
+
+/***************************** Home Page *****************************/
+#homePage {
+	margin-top: 100px;
+}
+
+
+/*****************************Contact Page*****************************/
+#contactPage {
+	margin-top: 100px;
+}
+
+label {
+	float: left;
+	color: #ecf0f1;
+}
+.contact-div {
+	max-width: 585px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 50px;
+}
+
+
+/*****************************footer******************************/
+footer {
+	position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  margin-top: 500px;
+  /*width: 100%;*/
+	/*height: 140px;*/
+  background-color: #bdc3c7;
+  padding-bottom: 20px;
+}
+
+
+/*Left Footer Column*/
+.shmap-logo-footer:hover {
+	opacity: 0.5;
+}
+
+/*Center Footer Column*/
+	.social-icon:hover {
+		opacity: 0.5;
+	}
+
+/*Right Footer Column*/
+.footer-links {
+	line-height: 10px;
+}
+
+
+
+
+/****************************** Media Queries ******************************/
+
+@media all and (max-width:768px) {
+
+/*This changes the color of the nav links*/
+.navbar-brand, .navbar-nav > li > a {
+	color: black;
+}
+
+	/* toggled background color of nav links */
+	.navbar .navbar-collapse .nav {
+	  background-color: white;
+	}
+
+	.navbar .navbar-collapse .nav:hover,
+	.navbar .navbar-collapse .nav:focus {
+	  background-color: #bdc3c7;
+	}
+
+
+/*Footer*/
+.container .text-muted {
+	margin: 20px 0 0 0;
+	text-align: center;
+}
+
+.shmap-logo-footer {
+	max-height: 30px;
+	display: block;
+	/*margin-top: 30px;*/
+  margin-left: auto;
+  margin-right: auto;
+}
+.social-icon-div {
+	text-align: center;
+	padding-top: 15px;
+}
+.social-icon {
+	max-width: 40px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.footer-links-p {
+	padding-top: 0px;
+}
+}
+
+
+
+@media all and (min-width:768px) {
+
+/*This changes the color of the nav links*/
+.navbar-brand, .navbar-nav > li > a {
+	color: #ecf0f1;
+}
+
+/*Footer*/
+.container .text-muted {
+	margin: 20px 0 10px 0;
+	text-align: center;
+}
+
+.shmap-logo-footer {
+	max-height: 40px;
+	display: block;
+	margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.social-icon-div {
+	text-align: center;
+	padding-top: 35px;
+}
+.social-icon {
+	max-width: 50px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.footer-links-p {
+	padding-top: 15px;
+}
+
+}
