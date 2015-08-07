@@ -1,80 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
- <?php
-  include ("_header.php")
-  ?>
-    <title>Shmap - Coming Soon!</title>
+    <head>
+     <?php
+      include ("_header.php")
+      ?>
+        <title>Shmap - Coming Soon!</title>
 
-</head>
+    </head>
 
-<body>
-<!-- Google Analytics tracking code -->
-<?php include_once("analyticstracking.php") ?>
+    <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.php"><img src="img/logotext.png" alt="Shmap Logo" class="img-responsive animated fadeInLeft" alt="Shmap Logo"></a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="index.php">Home</a>
-                    </li>
-                    <li>
-                        <a href="contact.php">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+    	<!-- Google Analytics tracking code -->
+    	<?php include_once("analyticstracking.php") ?>
+
+      <video autoplay poster="videos/6.png" id="bgvid">
+          <!-- <source src="videos/6.webm" type="video/webm"> -->
+          <source src="videos/6.mp4" type="video/mp4">
+      </video>
+
+
+      
+      <!-- Single button -->
+      <div id="btnDiv">
+        <div class="btn-group" id="landingButton">
+          <button type="button" class="btn btn-default" aria-haspopup="true" aria-expanded="false">
+            <a href="home.php"><!-- <img src="img/icon_white.png" id="iconLanding"> -->enter</a>
+          </button>
         </div>
-        <!-- /.container -->
-    </nav>
+      </div>
 
-    <!-- Page Content -->
-    <div class="wrap">
+      <!-- jQuery Version 1.11.1 -->
+      <script src="js/jquery.js"></script>
 
-        <div class="container" id="homePage">
+      <!-- Bootstrap Core JavaScript -->
+      <script src="js/bootstrap.min.js"></script>
+      
+      <script>
+          $(function() {
+            $("#landingButton").delay(4000).fadeIn();
+          });
+      </script>
 
-            <div class="row">
-
-                <div class="col-md-12 text-center welcome-message">
-                    <h1 class="animated flipInX"><em>Shmap - Coming soon!</em></h1>
-                    <p class="lead">Stay tuned...</p>
-                </div>
-
-
-            </div>
-            <!-- /.row -->
-
-        </div><!-- /.container -->
-        
-        <?php
-          include ("_footer.php")
-        ?>            
-
-    </div><!-- end Wrap -->
-    
-
-
-
-    <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-</body>
+    </body>
 
 </html>

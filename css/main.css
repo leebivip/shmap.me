@@ -5,20 +5,15 @@ div.clear {
 
 html {
   height: 100%;
-  /*box-sizing: border-box;*/
 }
-/**,
-*:before,
-*:after {
-  box-sizing: inherit;
-}*/
+
 
 body {
-	padding-top: 70px;/* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+	padding-top: 50px;/* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 	position: relative;
-  margin: 0;
-  padding-bottom: 30rem;/* This pushes the footer down under the content so it doesn't overlap */  
-  min-height: 100%;
+	margin: 0;
+	padding-bottom: 30rem;/* This pushes the footer down under the content so it doesn't overlap */  
+	min-height: 100%;
 }
 
 
@@ -34,7 +29,7 @@ body {
 
 body {
 	font-family: 'Source Sans Pro', sans-serif;
-		background: url(../img/mapblue.jpg) no-repeat center center fixed; 
+	background: url(../img/mapblue.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -78,16 +73,129 @@ h1,h2,h3,h4,h5,h6,p {
 
 
 
-/***************************** Home Page *****************************/
+.contact-div {
+	padding: 0 !important;
+}
+
+
+
+
+/*Landing Page*/
+
+video#bgvid {
+position: fixed;
+top: 50%;
+left: 50%;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: -10000;
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
+background: url(../videos/6.png) no-repeat top center;
+background-size: cover;
+}
+
+/***************************Buttons***************************/
+.btn{
+	/*background: transparent;*/
+	/*background-color: #3068b2;*/
+	background-image: 
+		linear-gradient(
+	      to top right, 
+	      #20aae1, #3068b2
+	    );
+	font-size: 1.75em;
+	border: 2px solid white;
+	box-shadow:  1px 1px 1px #000;
+	color: white;
+	text-shadow: 1px 1px 1px #000;
+
+	/* CSS Transition */
+	-webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-moz-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-ms-transition: background .2s ease-in-out, border .2s ease-in-out;
+	-o-transition: background .2s ease-in-out, border .2s ease-in-out;
+	transition: background .2s ease-in-out, border .2s ease-in-out;
+
+	/*remove rounded corners*/
+	-webkit-border-radius: 0;
+	-moz-border-radius:    0;
+	border-radius:         0;
+}
+
+#landingButton {
+	position: absolute;
+	bottom: 10%;
+	left: 47%;
+	display: none;
+}
+
+#btnDiv > #landingButton > .btn > a {
+	color: white;
+	text-shadow: 1px 1px 1px #000;
+}
+	#btnDiv > #landingButton > .btn > a:hover {
+			color: #bdc3c7;
+			text-decoration: none;
+		}
+
+/*#iconLanding {
+	margin-right: 5px;
+}
+	#iconLanding:hover {
+		opacity: 0.75;
+	}*/
+
+
+/***************************Chat Bubble Stylings***************************/
+.pageName {
+  position: relative;
+  padding: 15px;
+  margin: 1em 0 3em;
+  color: #000;
+  /*background: #f3961c;*/
+  border-radius: 20px;
+  /*background: linear-gradient(top, #f9d835, #f3961c);*/
+  background: white;
+}
+
+.pageName:after {
+  content: "";
+  display: block; /* reduce the damage in FF3.0 */
+  position: absolute;
+  bottom: -15px;
+  left: 50px;
+  width: 0;
+  border-width: 15px 15px 0;
+  border-style: solid;
+  border-color: white transparent;
+}
+
+.pageName h1, .pageName, p {
+	color: #3068b2;
+}
+
+
+
+
+/***************************** 
+Home Page 
+*****************************/
 #homePage {
 	margin-top: 100px;
 }
 
 
-/*****************************Contact Page*****************************/
+
+/*****************************
+Contact Page
+*****************************/
 #contactPage {
 	margin-top: 100px;
 }
+
 
 label {
 	float: left;
@@ -101,7 +209,9 @@ label {
 }
 
 
-/*****************************footer******************************/
+/*****************************
+footer
+******************************/
 footer {
 	position: absolute;
   right: 0;
@@ -138,82 +248,113 @@ footer {
 
 @media all and (max-width:768px) {
 
-/*This changes the color of the nav links*/
-.navbar-brand, .navbar-nav > li > a {
-	color: black;
-}
-
-	/* toggled background color of nav links */
-	.navbar .navbar-collapse .nav {
-	  background-color: white;
+	/*This changes the color of the nav links*/
+	.navbar-brand, .navbar-nav > li > a {
+		color: black;
 	}
 
-	.navbar .navbar-collapse .nav:hover,
-	.navbar .navbar-collapse .nav:focus {
-	  background-color: #bdc3c7;
+		/* toggled background color of nav links */
+		.navbar .navbar-collapse .nav {
+		  background-color: white;
+		}
+
+		.navbar .navbar-collapse .nav:hover,
+		.navbar .navbar-collapse .nav:focus {
+		  background-color: #bdc3c7;
+		}
+
+
+	/*Footer*/
+	.container .text-muted {
+		margin: 20px 0 0 0;
+		text-align: center;
+	}
+
+	.shmap-logo-footer {
+		max-height: 30px;
+		display: block;
+		/*margin-top: 30px;*/
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+	.social-icon-div {
+		text-align: center;
+		padding-top: 15px;
+	}
+	.social-icon {
+		max-width: 40px;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+	.footer-links-p {
+		padding-top: 0px;
+	}
+
+	/*Contact*/
+
+	#contactForm {
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 
 
-/*Footer*/
-.container .text-muted {
-	margin: 20px 0 0 0;
-	text-align: center;
-}
-
-.shmap-logo-footer {
-	max-height: 30px;
-	display: block;
-	/*margin-top: 30px;*/
-  margin-left: auto;
-  margin-right: auto;
-}
-.social-icon-div {
-	text-align: center;
-	padding-top: 15px;
-}
-.social-icon {
-	max-width: 40px;
-	margin-right: 10px;
-	margin-left: 10px;
-}
-.footer-links-p {
-	padding-top: 0px;
-}
 }
 
 
 
 @media all and (min-width:768px) {
 
-/*This changes the color of the nav links*/
-.navbar-brand, .navbar-nav > li > a {
-	color: #ecf0f1;
+	/*This changes the color of the nav links*/
+	.navbar-brand, .navbar-nav > li > a {
+		color: #ecf0f1;
+	}
+
+	/*Footer*/
+	.container .text-muted {
+		margin: 10px 0 10px 0;
+		text-align: center;
+	}
+
+	.shmap-logo-footer {
+		max-height: 40px;
+		display: block;
+		margin-top: 10px;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+	.social-icon-div {
+		text-align: center;
+		padding-top: 20px;
+	}
+		.social-icon {
+			max-width: 50px;
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+	.footer-links-p {
+		padding-top: 10px;
+	}
+
 }
 
-/*Footer*/
-.container .text-muted {
-	margin: 20px 0 10px 0;
-	text-align: center;
+
+/*This code ensures the full width background video on the landing page is not replaced with a "play" button*/
+@media screen and (max-device-width: 800px) {
+	
+	body { 
+		background: url(../img/mapblue.jpg) #000 no-repeat center center fixed; 
+	}
+	
+	#bgvid { 
+		display: none;
+	}
+
+	#landingButton {
+	position: absolute;
+	bottom: 10%;
+	left: 40%;
+	display: inline-block;
+	}
 }
 
-.shmap-logo-footer {
-	max-height: 40px;
-	display: block;
-	margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.social-icon-div {
-	text-align: center;
-	padding-top: 35px;
-}
-.social-icon {
-	max-width: 50px;
-	margin-left: 20px;
-	margin-right: 20px;
-}
-.footer-links-p {
-	padding-top: 15px;
-}
 
-}

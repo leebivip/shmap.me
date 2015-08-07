@@ -27,7 +27,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.php">Home</a>
+                        <a href="home.php">Home</a>
                     </li>
                     <li class="active">
                         <a href="contact.php">Contact</a>
@@ -45,49 +45,54 @@
       <div class="container" id="contactPage">
 
           <div class="row">
-              <div class="col-lg-3"></div>
-              <div class="col-lg-6 text-center">
-                  <h1 class="animated flipInX">Contact Us</h1>
+              
+              <div class="col-md-4"></div>
+              
+              <div class="col-md-4 text-center" id="contactCenterDiv">
+                
+                <!-- Chat Bubble -->
+                <div class="pageName animated bounceIn">
+                  <h1>Contact Us</h1>
+                </div>
 
-                  <a href="mailto:info@ideally.net"><p>info@ideally.net</p></a>
-                  <section id="contact">
-                    <div class="contact-div">
-                        <!-- <h2 class="contactUs">Contact Us</h2> -->
-                        <form name="sentMessage" id="contactForm" novalidate>
-                            <div class="row control-group">
-                                <div class="form-group floating-label-form-group controls">
-                                    <label>Name</label>
-                                    <input type="text" class="form-control" placeholder="Tell us who you are" id="name" required data-validation-required-message="Please enter your name.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="row control-group">
-                                <div class="form-group floating-label-form-group controls">
-                                    <label>Email Address</label>
-                                    <input type="email" class="form-control" placeholder="your@emailaddress.com" id="email" required data-validation-required-message="Please enter your email address.">
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="row control-group">
-                                <div class="form-group floating-label-form-group controls">
-                                    <label>Message</label>
-                                    <textarea rows="5" class="form-control" placeholder="Say hello" id="message" required data-validation-required-message="Please enter a message."></textarea>
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <br>
 
-                            <div id="success"></div>
+                <section id="contact">
+                  <div class="contact-div">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                      <div class="row control-group">
+                          <div class="form-group floating-label-form-group controls">
+                              <label>Name</label>
+                              <input type="text" class="form-control" placeholder="Tell us who you are" id="name" required data-validation-required-message="Please enter your name.">
+                              <p class="help-block text-danger"></p>
+                          </div>
+                      </div>
+                      <div class="row control-group">
+                          <div class="form-group floating-label-form-group controls">
+                              <label>Email Address</label>
+                              <input type="email" class="form-control" placeholder="your@emailaddress.com" id="email" required data-validation-required-message="Please enter your email address.">
+                              <p class="help-block text-danger"></p>
+                          </div>
+                      </div>
+                      <div class="row control-group">
+                          <div class="form-group floating-label-form-group controls">
+                              <label>Message</label>
+                              <textarea rows="5" class="form-control" placeholder="Say hello" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                              <p class="help-block text-danger"></p>
+                          </div>
+                      </div>
+                      <br>
 
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-success btn-md">Send</button>
-                            </div>
+                      <div id="success"></div>
 
-                        </form>
-                    </div>    
-                  </section>
+                      <div class="form-group">
+                          <button type="submit" class="btn btn-success btn-md">Send</button>
+                      </div>
+
+                    </form>
+                  </div>    
+                </section>
               </div>
-              <div class="col-lg-3"></div>
+              <div class="col-md-4"></div>
           </div>
           <!-- /.row -->
 
